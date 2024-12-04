@@ -14,8 +14,5 @@ COPY nginx.conf /etc/nginx/nginx.conf
 # Copy website files
 COPY web /usr/share/nginx/html
 
-# Expose ports
-EXPOSE 80
-
 # Start both Nginx and PHP-FPM
 CMD php-fpm8 -D && nginx -g "daemon off;"
